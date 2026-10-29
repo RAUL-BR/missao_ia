@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --cor-fundo: #0f1020;
+    --cor-caixa: #1b1d36;
+    --cor-texto: #f2f2f7;
+    --cor-destaque: #7c5cff;
+    --cor-destaque-hover: #9a82ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1,
+.caixa-perguntas,
+.caixa-resultado {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.caixa-principal {
+    background-color: var(--cor-caixa);
+    width: 100%;
+    max-width: 700px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+}
+
+.tela-inicial p {
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.caixa-perguntas {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botões em geral (iniciar, alternativas e jogar novamente) */
+button {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
+.iniciar-btn,
+.novamente-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.caixa-perguntas:empty,
+.caixa-alternativas:empty {
+    display: none;
+}
+
+/* A caixa de resultado só aparece quando recebe a classe "mostrar" */
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.texto-resultado {
+    line-height: 1.7;
+    margin: 20px 0 28px;
+}
